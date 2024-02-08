@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Dropbox Uploads" class="slds-p-around_medium">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-tree-grid
+                    columns={columns}
+                    data={treeData}
+                    key-field="id"
+                    expanded-rows={expandedRows}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column
+                ></lightning-tree-grid>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_medium">
+                <lightning-button-group>
+                    <lightning-button label="Upload to Dropbox" variant="brand" onclick={handleUpload}></lightning-button>
+                    <lightning-button label="Retrieve from Dropbox" variant="brand" onclick={handleRetrieve} class="slds-m-left_medium"></lightning-button>
+                </lightning-button-group>
+            </div>
+        </div>
+    </lightning-card>
+</template>
